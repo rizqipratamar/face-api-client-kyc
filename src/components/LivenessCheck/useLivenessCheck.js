@@ -36,7 +36,7 @@ const useLivenessCheck = () => {
       await faceapi.nets.faceLandmark68Net.loadFromUri("/models");
 
       navigator.mediaDevices
-        .getUserMedia({ video: { width: 500, height: 500 } })
+        .getUserMedia({ video: { width: 640, height: 480 } })
         .then((stream) => {
           if (videoRef.current) {
             videoRef.current.srcObject = stream;
