@@ -20,14 +20,19 @@ const LivenessCheck = () => {
         </div>
       ) : (
         <>
-          <video
-            ref={videoRef}
-            autoPlay
-            muted
-            playsInline
-            className="w-full h-dvh"
-          />
-          <canvas ref={canvasRef} className="absolute top-0 w-screen h-dvh" />
+          <div className="w-full h-dvh flex justify-center">
+            <video
+              ref={videoRef}
+              autoPlay
+              muted
+              playsInline
+              className="h-full w-full"
+            />
+            <canvas
+              ref={canvasRef}
+              className="absolute top-0 h-[98%] w-[90%]"
+            />
+          </div>
           <div className="w-full absolute top-0 flex justify-center pt-8">
             <div
               role="alert"
